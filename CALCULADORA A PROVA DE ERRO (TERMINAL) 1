@@ -1,0 +1,17 @@
+def ler_numero(mensagem):
+    while True:
+        try:
+            numero = float(input(mensagem))
+            return numero
+        except ValueError:
+            print("Erro: digite um número válido!")
+
+
+dividendo = ler_numero("Digite o dividendo: ")
+divisor = ler_numero("Digite o divisor: ")
+
+try:
+    quociente = dividendo / divisor
+    print(f"Resultado da divisão: {quociente}")
+except ZeroDivisionError:
+    print("Erro: não é possível dividir por zero!")
